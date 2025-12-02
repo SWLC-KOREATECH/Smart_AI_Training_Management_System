@@ -25,18 +25,17 @@
     <!-- 네비게이션 -->
     <nav class="fixed w-full bg-white/90 backdrop-blur-sm border-b border-slate-200 z-50">
         <div class="container mx-auto px-4 h-20 flex items-center justify-between">
-            <!-- [수정됨] 로고와 타이틀을 함께 배치하는 영역 -->
             <div class="flex items-center space-x-4">
-                <!-- 1. 지원단 로고 이미지 -->
+                <!-- 로고 이미지 -->
                 <img src="./logo.png" 
                      alt="일학습병행공동훈련센터지원단" 
                      class="h-10 w-auto object-contain hidden md:block"
                      onerror="this.style.display='none'">
                 
-                <!-- 구분선 (PC화면에서만 보임) -->
+                <!-- 구분선 -->
                 <div class="h-6 w-px bg-slate-300 hidden md:block"></div>
 
-                <!-- 2. 기존 로봇 이모지 + 타이틀 -->
+                <!-- [수정됨] 타이틀 변경 -->
                 <div class="flex items-center space-x-2">
                     <i class="fa-solid fa-robot text-blue-600 text-xl"></i>
                     <span class="font-bold text-lg text-slate-800">일학습병행 스마트 훈련 알림 봇</span>
@@ -45,6 +44,7 @@
 
             <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
                 <a href="#intro" class="hover:text-blue-600 transition">소개</a>
+                <a href="#features" class="hover:text-blue-600 transition">특장점</a>
                 <a href="#setup" class="hover:text-blue-600 transition">설치 가이드</a>
                 <a href="#guide" class="hover:text-blue-600 transition">상세 매뉴얼</a>
             </div>
@@ -77,8 +77,124 @@
         </div>
     </section>
 
+    <!-- 문제 해결 섹션 (Why Needed) -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <span class="text-blue-600 font-bold text-sm tracking-wider uppercase">Background</span>
+                        <h2 class="text-3xl font-bold text-slate-900 mt-2 leading-snug">왜 이 시스템이<br>필요한가요?</h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- 기존 문제점 -->
+                        <div class="space-y-3">
+                            <h3 class="font-bold text-red-500 flex items-center"><i class="fa-solid fa-triangle-exclamation mr-2"></i>기존의 문제점</h3>
+                            
+                            <div class="flex items-start bg-red-50 p-3 rounded-lg">
+                                <i class="fa-solid fa-xmark text-red-500 mt-1 mr-3"></i>
+                                <p class="text-slate-700 text-sm">매번 카톡/문자로 일정을 공지해야 하는 <strong>반복 업무의 비효율</strong></p>
+                            </div>
+                            <div class="flex items-start bg-red-50 p-3 rounded-lg">
+                                <i class="fa-solid fa-xmark text-red-500 mt-1 mr-3"></i>
+                                <p class="text-slate-700 text-sm">시간 착오로 인한 훈련생들의 <strong>비콘 출결 누락 빈번</strong></p>
+                            </div>
+                            <div class="flex items-start bg-red-50 p-3 rounded-lg">
+                                <i class="fa-solid fa-xmark text-red-500 mt-1 mr-3"></i>
+                                <p class="text-slate-700 text-sm">과정별 일정이 섞여 있어 <strong>체계적인 관리 및 공유 어려움</strong></p>
+                            </div>
+                        </div>
+
+                        <!-- 도입 효과 -->
+                        <div class="space-y-3 pt-2">
+                            <h3 class="font-bold text-blue-600 flex items-center"><i class="fa-solid fa-wand-magic-sparkles mr-2"></i>도입 기대 효과</h3>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center mt-0.5 mr-3">
+                                    <i class="fa-solid fa-check text-blue-600 text-xs"></i>
+                                </div>
+                                <p class="text-slate-700 text-sm">일정 관리 시간 <strong>100% 단축</strong> 및 업무 효율화</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center mt-0.5 mr-3">
+                                    <i class="fa-solid fa-check text-blue-600 text-xs"></i>
+                                </div>
+                                <p class="text-slate-700 text-sm">10분 전 칼알림으로 <strong>출결률 및 정시 입실률 향상</strong></p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center mt-0.5 mr-3">
+                                    <i class="fa-solid fa-check text-blue-600 text-xs"></i>
+                                </div>
+                                <p class="text-slate-700 text-sm">별도 문자 비용 없이 슬랙을 활용해 <strong>평생 무료 운영</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 시스템 구조도 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-lg">
+                    <h3 class="text-center font-bold text-slate-500 mb-8 text-sm tracking-widest">SYSTEM ARCHITECTURE</h3>
+                    
+                    <div class="relative flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
+                        <!-- 연결선 (PC용) -->
+                        <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-200 -z-10 transform -translate-y-1/2"></div>
+                        
+                        <!-- 노드 1 (수정됨: 아이콘 fa-file-csv -> fa-table) -->
+                        <div class="flex flex-col items-center bg-white p-4 rounded-xl shadow-sm border border-slate-100 w-32 relative z-10">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-2">
+                                <i class="fa-solid fa-table text-green-600 text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-slate-700">Google<br>Sheets</span>
+                            <span class="text-[10px] text-slate-400 mt-1">일정 입력</span>
+                        </div>
+                        
+                        <!-- 화살표 (모바일용) -->
+                        <i class="fa-solid fa-arrow-down text-slate-300 md:hidden"></i>
+                        <i class="fa-solid fa-angle-right text-slate-300 hidden md:block"></i>
+                        
+                        <!-- 노드 2 -->
+                        <div class="flex flex-col items-center bg-white p-4 rounded-xl shadow-sm border border-slate-100 w-32 relative z-10">
+                            <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-2">
+                                <i class="fa-solid fa-gear text-slate-600 text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-slate-700">Apps<br>Script</span>
+                            <span class="text-[10px] text-slate-400 mt-1">자동화 엔진</span>
+                        </div>
+
+                        <!-- 화살표 -->
+                        <i class="fa-solid fa-arrow-down text-slate-300 md:hidden"></i>
+                        <i class="fa-solid fa-angle-right text-slate-300 hidden md:block"></i>
+                        
+                        <!-- 노드 3 -->
+                        <div class="flex flex-col items-center bg-white p-4 rounded-xl shadow-sm border border-slate-100 w-32 relative z-10">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-2">
+                                <i class="fa-solid fa-calendar-days text-blue-500 text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-slate-700">Google<br>Calendar</span>
+                            <span class="text-[10px] text-slate-400 mt-1">일정 저장</span>
+                        </div>
+
+                        <!-- 화살표 -->
+                        <i class="fa-solid fa-arrow-down text-slate-300 md:hidden"></i>
+                        <i class="fa-solid fa-angle-right text-slate-300 hidden md:block"></i>
+                        
+                        <!-- 노드 4 -->
+                        <div class="flex flex-col items-center bg-white p-4 rounded-xl shadow-sm border border-slate-100 w-32 relative z-10">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-2">
+                                <i class="fa-brands fa-slack text-purple-600 text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-slate-700">Slack<br>Alarm</span>
+                            <span class="text-[10px] text-slate-400 mt-1">10분전 발송</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 설치 가이드 섹션 -->
-    <section id="setup" class="py-20 bg-white">
+    <section id="setup" class="py-20 bg-slate-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-4">🚀 초기 설치 가이드</h2>
             <p class="text-center text-slate-500 mb-12">시스템 구축을 위해 순서대로 따라해 주세요.</p>
@@ -91,8 +207,8 @@
                     <p class="text-slate-600 mb-4 text-sm leading-relaxed">
                         일정이 등록될 전용 캘린더를 먼저 만들어야 합니다.
                     </p>
-                    <ol class="list-decimal list-inside bg-slate-50 p-4 rounded-lg text-sm text-slate-700 space-y-2 border border-slate-200">
-                        <li><a href="https://calendar.google.com/" target="_blank" class="text-blue-600 underline">구글 캘린더</a>에 접속합니다.</li>
+                    <ol class="list-decimal list-inside bg-white p-6 rounded-lg text-sm text-slate-700 space-y-2 border border-slate-200 shadow-sm">
+                        <li><a href="https://calendar.google.com/" target="_blank" class="text-blue-600 underline font-bold">구글 캘린더(클릭)</a>에 접속합니다.</li>
                         <li>왼쪽 메뉴의 '다른 캘린더' 옆 <strong>[+]</strong> 버튼 클릭 &rarr; <strong>[새 캘린더 만들기]</strong> 선택</li>
                         <li>이름에 <strong>출결</strong> (또는 원하는 이름) 입력 후 [캘린더 만들기] 클릭</li>
                         <li><span class="text-red-500 font-bold">*중요:</span> 이 캘린더의 이름을 정확히 기억해두세요. (나중에 설정에 입력해야 함)</li>
@@ -105,10 +221,10 @@
                     <p class="text-slate-600 mb-4 text-sm leading-relaxed">
                         알림을 받을 공간(워크스페이스)과 방(채널)을 먼저 만들어야 합니다.
                     </p>
-                    <ol class="list-decimal list-inside bg-slate-50 p-4 rounded-lg text-sm text-slate-700 space-y-2 border border-slate-200">
-                        <li><a href="https://slack.com/" target="_blank" class="text-blue-600 underline">슬랙(Slack)</a>에 접속하여 회원가입 후 <strong>[워크스페이스 생성]</strong>을 진행합니다. (이미 있다면 건너뛰기)</li>
+                    <ol class="list-decimal list-inside bg-white p-6 rounded-lg text-sm text-slate-700 space-y-2 border border-slate-200 shadow-sm">
+                        <li><a href="https://slack.com/" target="_blank" class="text-blue-600 underline font-bold">슬랙(Slack)</a>에 접속하여 회원가입 후 <strong>[워크스페이스 생성]</strong>을 진행합니다. (이미 있다면 건너뛰기)</li>
                         <li>훈련 과정별로 알림을 받을 <strong>채널을 생성</strong>합니다.
-                            <ul class="list-disc list-inside ml-4 mt-2 mb-2 text-xs text-slate-600 bg-white p-2 rounded border border-slate-200">
+                            <ul class="list-disc list-inside ml-4 mt-2 mb-2 text-xs text-slate-600 bg-slate-50 p-3 rounded border border-slate-100">
                                 <li>예시 1: <strong>#공지-한기대반</strong> (한기대 훈련생용)</li>
                                 <li>예시 2: <strong>#공지-일학습반</strong> (일학습 훈련생용)</li>
                                 <li>예시 3: <strong>#관리자-알림</strong> (담당자 확인용)</li>
@@ -122,10 +238,11 @@
                 <div class="setup-step">
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Step 2. 슬랙 앱(Bot) 생성 및 연결</h3>
                     <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                        만들어둔 채널에 메시지를 보낼 '우체부 로봇'을 만드는 과정입니다.
+                        만들어둔 채널에 메시지를 보낼 '메신저 봇'을 만드는 과정입니다.
                     </p>
-                    <ol class="list-decimal list-inside bg-slate-50 p-4 rounded-lg text-sm text-slate-700 space-y-2 border border-slate-200">
-                        <li><a href="https://api.slack.com/apps" target="_blank" class="text-blue-600 underline">Slack API 사이트(클릭)</a>에 접속합니다.</li>
+                    <ol class="list-decimal list-inside bg-white p-6 rounded-lg text-sm text-slate-700 space-y-2 border border-slate-200 shadow-sm">
+                        <!-- [수정됨] 로그인 안내 추가 -->
+                        <li><a href="https://api.slack.com/apps" target="_blank" class="text-blue-600 underline font-bold">Slack API 사이트(클릭)</a>에 접속합니다. <span class="text-red-500">(※ 회원가입한 슬랙 계정으로 로그인이 필요합니다)</span></li>
                         <li>우측 상단의 <strong>[Create New App]</strong> &rarr; <strong>[From scratch]</strong> 선택.</li>
                         <li><strong>App Name</strong>(예: 훈련출결 알리미) 입력 후 워크스페이스를 선택하고 [Create App] 클릭.</li>
                         <li>왼쪽 메뉴 <strong>[Incoming Webhooks]</strong> &rarr; 스위치를 <strong>[On]</strong>으로 켜기.</li>
@@ -144,8 +261,7 @@
                     </p>
                     
                     <div class="mb-4">
-                        <a href="https://docs.google.com/spreadsheets/d/1OP9HSVQ-PpcGgJnLw3iCf3gcRPsd2Hb8bbhoCM-DfnQ/copy" target="_blank" class="inline-flex items-center px-5 py-2.5 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition shadow-md group">
-                            <!-- 아이콘 변경: fa-file-csv -> fa-table -->
+                        <a href="https://docs.google.com/spreadsheets/d/1OP9HSVQ-PpcGgJnLw3iCf3gcRPsd2Hb8bbhoCM-DfnQ/copy" target="_blank" class="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition shadow-md group">
                             <i class="fa-solid fa-table mr-2 group-hover:animate-bounce"></i>
                             양식 복사하기 (클릭)
                         </a>
@@ -162,10 +278,10 @@
                     <p class="text-slate-600 mb-4 text-sm leading-relaxed">
                         복사된 시트에 내 정보(캘린더, 슬랙 주소)를 입력하는 마지막 단계입니다.
                     </p>
-                    <ol class="list-decimal list-inside bg-slate-50 p-4 rounded-lg text-sm text-slate-700 space-y-2 border border-slate-200">
+                    <ol class="list-decimal list-inside bg-white p-6 rounded-lg text-sm text-slate-700 space-y-2 border border-slate-200 shadow-sm">
                         <li>복사된 스프레드시트 상단 메뉴 <strong>[확장 프로그램]</strong> &rarr; <strong>[Apps Script]</strong> 클릭</li>
                         <li>코드 편집기가 열리면 맨 윗부분의 설정을 수정합니다.
-                            <ul class="list-disc list-inside ml-4 mt-2 mb-2 text-xs text-slate-600 bg-white p-2 rounded border border-slate-200">
+                            <ul class="list-disc list-inside ml-4 mt-2 mb-2 text-xs text-slate-600 bg-slate-50 p-3 rounded border border-slate-100">
                                 <li><code>TARGET_CALENDAR_NAME</code>: Step 0에서 만든 캘린더 이름 ('출결')</li>
                                 <li><code>ADMIN_WEBHOOK</code>: Step 2에서 확보한 '관리자용' 웹훅 주소</li>
                                 <li><code>CHANNEL_MAP</code>: Step 2에서 확보한 '채널별' 웹훅 주소를 각각 입력</li>
@@ -182,7 +298,7 @@
     </section>
 
     <!-- 사용자 매뉴얼 섹션 -->
-    <section id="guide" class="py-20 bg-slate-50">
+    <section id="guide" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-4">상세 사용자 매뉴얼</h2>
             <p class="text-center text-slate-500 mb-12">복사된 스프레드시트의 올바른 사용법입니다.</p>
@@ -190,11 +306,11 @@
             <div class="space-y-12">
                 
                 <!-- 1. 시트 구조 설명 -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm">
                     <h3 class="text-xl font-bold text-blue-600 mb-4"><i class="fa-solid fa-table-columns mr-2"></i>1. 시트 입력 규칙 및 검증</h3>
                     <p class="text-slate-600 mb-6">각 열(Column)은 정해진 규칙대로 입력해야 봇이 인식합니다. 규칙을 어길 경우 <strong>H열(상태)</strong>에 에러가 표시됩니다.</p>
                     
-                    <div class="overflow-x-auto">
+                    <div class="overflow-x-auto bg-white rounded-lg border border-slate-200">
                         <table class="w-full text-sm text-left text-slate-600">
                             <thead class="text-xs text-slate-700 uppercase bg-slate-100">
                                 <tr>
@@ -271,22 +387,22 @@
 
                 <!-- 2. 작동 원리 설명 -->
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm">
                         <h3 class="text-xl font-bold text-blue-600 mb-4"><i class="fa-solid fa-network-wired mr-2"></i>2. 알림 발송 원리</h3>
                         <p class="text-slate-600 mb-4 text-sm">D열에 입력한 <strong>[말머리]</strong>에 따라 알림이 가는 방이 달라집니다. (Apps Script 설정에서 변경 가능)</p>
                         
                         <div class="space-y-3">
-                            <div class="flex items-center p-3 bg-slate-50 rounded border border-slate-200">
+                            <div class="flex items-center p-3 bg-white rounded border border-slate-200">
                                 <span class="font-bold text-blue-600 w-24">[한기대]</span>
                                 <i class="fa-solid fa-arrow-right text-slate-400 mx-2"></i>
                                 <span class="text-slate-700 text-sm">#공지-한기대반</span>
                             </div>
-                            <div class="flex items-center p-3 bg-slate-50 rounded border border-slate-200">
+                            <div class="flex items-center p-3 bg-white rounded border border-slate-200">
                                 <span class="font-bold text-purple-600 w-24">[일학습]</span>
                                 <i class="fa-solid fa-arrow-right text-slate-400 mx-2"></i>
                                 <span class="text-slate-700 text-sm">#공지-일학습반</span>
                             </div>
-                            <div class="flex items-center p-3 bg-slate-50 rounded border border-slate-200">
+                            <div class="flex items-center p-3 bg-white rounded border border-slate-200">
                                 <span class="font-bold text-green-600 w-24">[공통]</span>
                                 <i class="fa-solid fa-arrow-right text-slate-400 mx-2"></i>
                                 <span class="text-slate-700 text-sm">모든 채널 동시 발송</span>
@@ -294,7 +410,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm">
                         <h3 class="text-xl font-bold text-blue-600 mb-4"><i class="fa-solid fa-calendar-check mr-2"></i>3. 캘린더 등록 위치</h3>
                         <p class="text-slate-600 mb-4 text-sm">
                             사용자가 [작업 실행하기]를 누르면, 봇은 내 구글 계정에 있는 <strong>특정 이름의 캘린더</strong>를 찾아 일정을 넣습니다.
